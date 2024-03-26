@@ -11,8 +11,8 @@ async function main() {
       ctx.reply(
         `Hi ${ctx.message.from.first_name},\n\nI can Download Files from Terabox.\n\nMade with ❤️ by @botcodes123\n\nSend any terabox link to download.`,
         Markup.inlineKeyboard([
-          Markup.button.url(" Channel", "https://t.me/botcodes123"),
-          Markup.button.url("Report bug", "https://t.me/Armanidrisi_bot"),
+          Markup.button.url(" Channel", "https://t.me/fellicia_sup"),
+          Markup.button.url("Report bug", "https://t.me/fellicia_sup"),
         ]),
       );
     } catch (e) {
@@ -35,13 +35,13 @@ async function main() {
         const details = await getDetails(messageText);
         if (details && details.direct_link) {
           try {
-            ctx.reply(`Sending Files Please Wait.!!`);
+            ctx.reply(`Memproses...!!!`);
             sendFile(details.direct_link, ctx);
           } catch (e) {
             console.error(e); // Log the error for debugging
           }
         } else {
-          ctx.reply('Something went wrong 🙃');
+          ctx.reply('Ada sesuatu yang salah😔');
         }
         console.log(details);
       } else {
